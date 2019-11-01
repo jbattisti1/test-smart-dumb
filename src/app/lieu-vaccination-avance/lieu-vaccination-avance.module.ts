@@ -10,4 +10,4 @@ import { ChampTexteComponent } from './champ-texte/champ-texte.component';
     CommonModule
   ]
 })
-export class RechercheVilleAvanceeModule { }
+export class LieuVaccinationAvanceModule { }
