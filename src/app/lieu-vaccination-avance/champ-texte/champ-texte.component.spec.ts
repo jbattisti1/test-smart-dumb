@@ -9,7 +9,7 @@ describe('<app-champ-texte />', () => {
     shallow = new Shallow(ChampTexteComponent, LieuVaccinationAvanceModule);
   });
 
-  it('doit afficher donnée injecté', async () => {
+  it('doit afficher donnée injectée', async () => {
     const { find } = await shallow.render('<app-champ-texte texte="Québec"></app-champ-texte>');
     expect(find('[data-testid="champ-texte"]').nativeElement.value).toBe('Québec');
   });
