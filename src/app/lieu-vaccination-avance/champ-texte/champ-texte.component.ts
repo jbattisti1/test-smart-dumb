@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-champ-texte',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChampTexteComponent implements OnInit {
 
+  @Input() texte = '';
+  @Output() texteInput: EventEmitter<string> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  emitTexteInput(event: any) {
+    this.texteInput.emit(event.target.value);
+  }
 }
